@@ -9,14 +9,14 @@
  * that starts the plugin.
  *
  * @link              https://lucasbonomo.com
- * @since             0.0.3
+ * @since             0.0.4
  * @package           Show_Remote_Ip
  *
  * @wordpress-plugin
  * Plugin Name:       Show Remote IP
  * Plugin URI:        https://lucasbonomo.com/wordpress
  * Description:       Just show the remote IP of client (with a shortcode [show-remote-ip])
- * Version:           0.0.3
+ * Version:           0.0.4
  * Author:            Lucas Bonomo
  * Author URI:        https://lucasbonomo.com
  * License:           GPL-2.0+
