@@ -1,5 +1,4 @@
 <?php
-
 /**
  * The plugin bootstrap file
  *
@@ -9,14 +8,18 @@
  * that starts the plugin.
  *
  * @link              https://lucasbonomo.com
- * @since             0.0.4
+ * @since             1.0.0
  * @package           Show_Remote_Ip
  *
  * @wordpress-plugin
  * Plugin Name:       Show Remote IP
  * Plugin URI:        https://lucasbonomo.com/wordpress
  * Description:       Just show the remote IP of client (with a shortcode [show-remote-ip])
- * Version:           0.0.4
+ * Version:           1.0.0
+ * Stable tag:        1.0.0
+ * Requires at least: 5.0
+ * Requires PHP:      7.0
+ * Tested up to:      5.5
  * Author:            Lucas Bonomo
  * Author URI:        https://lucasbonomo.com
  * License:           GPL-2.0+
