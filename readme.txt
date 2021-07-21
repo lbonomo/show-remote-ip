@@ -12,9 +12,14 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Just show the remote IP of client (with a shortcode [show-remote-ip])
 
+== Description ==
+
+== Installation ==
+
+== Changelog ==
 
 = 1.0.1 =
-*Release Date 18/09/2020*
+*Release Date 16/02/2021*
 - Tested on WordPress 5.7.0
 
 = 1.0.0 =
