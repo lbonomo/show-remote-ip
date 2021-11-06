@@ -2,8 +2,8 @@
 Contributors: lbonomo
 Donate link: https://lucasbonomo.com
 Tags: shortcode, ip
-Version: 1.2.0
-Stable tag: 1.2.0
+Version: 1.2.1
+Stable tag: 1.2.1
 Tested up to: 5.8.1
 Requires at least: 5.0.0
 Requires PHP: 7.4
