@@ -1,5 +1,4 @@
 <?php
-
 /**
  * The file that defines the core plugin class
  *
@@ -78,6 +77,7 @@ class Show_Remote_Ip {
 		$this->set_locale();
 		$this->define_admin_hooks();
 		$this->define_public_hooks();
+		$this->define_api_hooks();
 
 	}
 
@@ -121,6 +121,11 @@ class Show_Remote_Ip {
 		 * side of the site.
 		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-show-remote-ip-public.php';
+
+		/**
+		 * The class responsible for defining API endpoint.
+		 */
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'api/class-show-remote-ip-api.php';
 
 		$this->loader = new Show_Remote_Ip_Loader();
 
@@ -173,11 +178,24 @@ class Show_Remote_Ip {
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
 
-		/** @lbonomo | Registro el shortcode */
+		// @lbonomo | Registro el shortcode.
 		$this->loader->add_action( 'shortcode', $plugin_public, 'show-remote-ip' );
-		# Ver public/class-[]-public.php
-		add_shortcode( 'show-remote-ip', array( $plugin_public, 'show_remote_ip') );
+		// Ver public/class-[]-public.php.
+		add_shortcode( 'show-remote-ip', array( $plugin_public, 'show_remote_ip' ) );
 
+	}
+
+	/**
+	 * Register all of the hooks related to the public-facing functionality
+	 * of the plugin.
+	 *
+	 * @since   0.0.2
+	 * @access   private
+	 */
+	private function define_api_hooks() {
+
+		$plugin_api = new Show_Remote_Ip_API( $this->get_plugin_name(), $this->get_version() );
+		$this->loader->add_action( 'rest_api_init', $plugin_api, 'show_remote_ip_api' );
 	}
 
 	/**
