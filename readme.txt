@@ -10,7 +10,8 @@ Requires PHP: 7.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Just show the remote IP of client (with a shortcode [show-remote-ip])
+Just show the remote IP of client (with a shortcode [show-remote-ip]) 
+and public an endpoint to show the IP (/wp-json/show-remote-ip/v1/get-ip)
 
 == Description ==
 
