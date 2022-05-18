@@ -8,18 +8,18 @@
  * that starts the plugin.
  *
  * @link              https://lucasbonomo.com
- * @since             1.2.1
+ * @since             1.2.2
  * @package           Show_Remote_Ip
  *
  * @wordpress-plugin
  * Plugin Name:       Show Remote IP
  * Plugin URI:        https://lucasbonomo.com/wordpress
  * Description:       Just show the remote IP of client (with a shortcode [show-remote-ip])
- * Version:           1.2.1
- * Stable tag:        1.2.1
+ * Version:           1.2.2
+ * Stable tag:        1.2.2
  * Requires at least: 5.0
  * Requires PHP:      7.0
- * Tested up to:      5.8.1
+ * Tested up to:      6.1.0
  * Author:            Lucas Bonomo
  * Author URI:        https://lucasbonomo.com
  * License:           GPL-2.0+
@@ -38,7 +38,7 @@ if ( ! defined( 'WPINC' ) ) {
  * Start at version 0.0.2 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
  */
-define( 'SHOW_REMOTE_IP_VERSION', '0.0.2' );
+define( 'SHOW_REMOTE_IP_VERSION', '1.2.2' );
 
 /**
  * The code that runs during plugin activation.
@@ -74,7 +74,6 @@ require plugin_dir_path( __FILE__ ) . 'includes/class-show-remote-ip.php';
  * then kicking off the plugin from this point in the file does
  * not affect the page life cycle.
  *
- * @since    0.0.2
  */
 function run_show_remote_ip() {
 

@@ -19,6 +19,10 @@ and public an endpoint to show the IP (/wp-json/show-remote-ip/v1/get-ip)
 
 == Changelog ==
 
+= 1.2.2 =
+*Release Date 18/05/2022*
+- Tested on WordPress 6.1.0
+
 = 1.2.0 =
 *Release Date 9/08/2021*
 - New endpoint to show IP address on API `wp-json/show-remote-ip/v1/get-ip`.
