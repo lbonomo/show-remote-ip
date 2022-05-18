@@ -2,9 +2,9 @@
 Contributors: lbonomo
 Donate link: https://lucasbonomo.com
 Tags: shortcode, ip
-Version: 1.2.3
+Version: 1.2.4
 Stable tag: 1.2.3
-Tested up to: 6.1.0
+Tested up to: 6.0.0
 Requires at least: 5.0.0
 Requires PHP: 7.4
 License: GPLv2 or later
@@ -19,9 +19,9 @@ and public an endpoint to show the IP (/wp-json/show-remote-ip/v1/get-ip)
 
 == Changelog ==
 
-= 1.2.3 =
+= 1.2.4 =
 *Release Date 18/05/2022*
-- Tested on WordPress 6.1.0
+- Tested on WordPress 6.0.0
 
 = 1.2.0 =
 *Release Date 9/08/2021*
