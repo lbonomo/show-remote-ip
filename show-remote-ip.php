@@ -15,19 +15,10 @@
  * Plugin Name:       Show Remote IP
  * Plugin URI:        https://lucasbonomo.com/wordpress
  * Description:       Just show the remote IP of client (with a shortcode [show-remote-ip])
-<<<<<<< HEAD
- * Version:           1.2.4
- * Stable tag:        1.2.4
- * Requires at least: 5.0
- * Requires PHP:      7.0
- * Tested up to:      6.0.0
-=======
  * Version:           1.2.3
  * Stable tag:        1.2.3
- * Requires at least: 5.0
  * Requires PHP:      7.0
  * Tested up to:      6.7.1
->>>>>>> v1.2.3
  * Author:            Lucas Bonomo
  * Author URI:        https://lucasbonomo.com
  * License:           GPL-2.0+
@@ -81,12 +72,10 @@ require plugin_dir_path( __FILE__ ) . 'includes/class-show-remote-ip.php';
  * Since everything within the plugin is registered via hooks,
  * then kicking off the plugin from this point in the file does
  * not affect the page life cycle.
- *
  */
 function run_show_remote_ip() {
 
 	$plugin = new Show_Remote_Ip();
 	$plugin->run();
-
 }
 run_show_remote_ip();

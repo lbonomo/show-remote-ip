@@ -50,7 +50,6 @@ class Show_Remote_Ip_API {
 
 		$this->plugin_name = $plugin_name;
 		$this->version     = $version;
-
 	}
 
 	/**

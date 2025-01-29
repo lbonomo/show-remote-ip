@@ -2,15 +2,9 @@
 Contributors: lbonomo
 Donate link: https://lucasbonomo.com
 Tags: shortcode, ip
-<<<<<<< HEAD
-Version: 1.2.4
-Stable tag: 1.2.3
-Tested up to: 6.0.0
-=======
 Version: 1.2.3
 Stable tag: 1.2.3
-Tested up to: 6.1.0
->>>>>>> v1.2.3
+Tested up to: 6.7.1
 Requires at least: 5.0.0
 Requires PHP: 7.4
 License: GPLv2 or later
@@ -25,15 +19,11 @@ and public an endpoint to show the IP (/wp-json/show-remote-ip/v1/get-ip)
 
 == Changelog ==
 
-<<<<<<< HEAD
-= 1.2.4 =
-=======
 = 1.2.3 =
 *Release Date 29/01/2025*
 - Tested on WordPress 6.7.1
 
 = 1.2.2 =
->>>>>>> v1.2.3
 *Release Date 18/05/2022*
 - Tested on WordPress 6.0.0
 

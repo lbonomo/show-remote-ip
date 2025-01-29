@@ -78,7 +78,6 @@ class Show_Remote_Ip {
 		$this->define_admin_hooks();
 		$this->define_public_hooks();
 		$this->define_api_hooks();
-
 	}
 
 	/**
@@ -103,32 +102,31 @@ class Show_Remote_Ip {
 		 * The class responsible for orchestrating the actions and filters of the
 		 * core plugin.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-show-remote-ip-loader.php';
+		require_once plugin_dir_path( __DIR__ ) . 'includes/class-show-remote-ip-loader.php';
 
 		/**
 		 * The class responsible for defining internationalization functionality
 		 * of the plugin.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-show-remote-ip-i18n.php';
+		require_once plugin_dir_path( __DIR__ ) . 'includes/class-show-remote-ip-i18n.php';
 
 		/**
 		 * The class responsible for defining all actions that occur in the admin area.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-show-remote-ip-admin.php';
+		require_once plugin_dir_path( __DIR__ ) . 'admin/class-show-remote-ip-admin.php';
 
 		/**
 		 * The class responsible for defining all actions that occur in the public-facing
 		 * side of the site.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-show-remote-ip-public.php';
+		require_once plugin_dir_path( __DIR__ ) . 'public/class-show-remote-ip-public.php';
 
 		/**
 		 * The class responsible for defining API endpoint.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'api/class-show-remote-ip-api.php';
+		require_once plugin_dir_path( __DIR__ ) . 'api/class-show-remote-ip-api.php';
 
 		$this->loader = new Show_Remote_Ip_Loader();
-
 	}
 
 	/**
@@ -145,7 +143,6 @@ class Show_Remote_Ip {
 		$plugin_i18n = new Show_Remote_Ip_i18n();
 
 		$this->loader->add_action( 'plugins_loaded', $plugin_i18n, 'load_plugin_textdomain' );
-
 	}
 
 	/**
@@ -161,7 +158,6 @@ class Show_Remote_Ip {
 
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
-
 	}
 
 	/**
@@ -182,7 +178,6 @@ class Show_Remote_Ip {
 		$this->loader->add_action( 'shortcode', $plugin_public, 'show-remote-ip' );
 		// Ver public/class-[]-public.php.
 		add_shortcode( 'show-remote-ip', array( $plugin_public, 'show_remote_ip' ) );
-
 	}
 
 	/**
@@ -237,5 +232,4 @@ class Show_Remote_Ip {
 	public function get_version() {
 		return $this->version;
 	}
-
 }

@@ -30,7 +30,5 @@ class Show_Remote_Ip_Deactivator {
 	 * @since   0.0.2
 	 */
 	public static function deactivate() {
-
 	}
-
 }

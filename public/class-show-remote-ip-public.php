@@ -44,14 +44,13 @@ class Show_Remote_Ip_Public {
 	 * Initialize the class and set its properties.
 	 *
 	 * @since    0.0.2
-	 * @param      string    $plugin_name       The name of the plugin.
-	 * @param      string    $version    The version of this plugin.
+	 * @param      string $plugin_name       The name of the plugin.
+	 * @param      string $version    The version of this plugin.
 	 */
 	public function __construct( $plugin_name, $version ) {
 
 		$this->plugin_name = $plugin_name;
-		$this->version = $version;
-
+		$this->version     = $version;
 	}
 
 	/**
@@ -74,7 +73,6 @@ class Show_Remote_Ip_Public {
 		 */
 
 		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/show-remote-ip-public.css', array(), $this->version, 'all' );
-
 	}
 
 	/**
@@ -97,15 +95,13 @@ class Show_Remote_Ip_Public {
 		 */
 
 		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/show-remote-ip-public.js', array( 'jquery' ), $this->version, false );
-
 	}
 
 	/**
 	 * @lbonomo / Arranco con el ShortCode
 	 */
 	public function show_remote_ip() {
-		$html = '<span class="show-remote-ip">'.$_SERVER['REMOTE_ADDR'].'</span>';
+		$html = '<span class="show-remote-ip">' . $_SERVER['REMOTE_ADDR'] . '</span>';
 		return $html;
 	}
-
 }
