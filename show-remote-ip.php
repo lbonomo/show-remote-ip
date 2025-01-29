@@ -8,18 +8,18 @@
  * that starts the plugin.
  *
  * @link              https://lucasbonomo.com
- * @since             1.2.2
+ * @since             1.2.3
  * @package           Show_Remote_Ip
  *
  * @wordpress-plugin
  * Plugin Name:       Show Remote IP
  * Plugin URI:        https://lucasbonomo.com/wordpress
  * Description:       Just show the remote IP of client (with a shortcode [show-remote-ip])
- * Version:           1.2.2
- * Stable tag:        1.2.2
+ * Version:           1.2.3
+ * Stable tag:        1.2.3
  * Requires at least: 5.0
  * Requires PHP:      7.0
- * Tested up to:      6.1.0
+ * Tested up to:      6.7.1
  * Author:            Lucas Bonomo
  * Author URI:        https://lucasbonomo.com
  * License:           GPL-2.0+
