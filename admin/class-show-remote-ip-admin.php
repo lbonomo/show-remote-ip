@@ -9,6 +9,8 @@
  * @subpackage Show_Remote_Ip/admin
  */
 
+namespace Bonomo\Admin;
+
 /**
  * The admin-specific functionality of the plugin.
  *

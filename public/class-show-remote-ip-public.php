@@ -9,6 +9,8 @@
  * @subpackage Show_Remote_Ip/public
  */
 
+namespace Bonomo\Public;
+
 /**
  * The public-facing functionality of the plugin.
  *

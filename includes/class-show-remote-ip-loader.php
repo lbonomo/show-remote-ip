@@ -9,6 +9,8 @@
  * @subpackage Show_Remote_Ip/includes
  */
 
+namespace Bonomo\Includes;
+
 /**
  * Register all actions and filters for the plugin.
  *

@@ -12,40 +12,40 @@
  * @subpackage Show_Remote_Ip/includes
  */
 
+namespace Bonomo\Includes;
+
 /**
  * The class responsible for orchestrating the actions and filters of the
  * core plugin.
  */
 require_once plugin_dir_path( __DIR__ ) . 'includes/class-show-remote-ip-loader.php';
-use Show_Remote_Ip_Loader;
+use Bonomo\Includes\Show_Remote_Ip_Loader;
 
 /**
  * The class responsible for defining internationalization functionality
  * of the plugin.
  */
 require_once plugin_dir_path( __DIR__ ) . 'includes/class-show-remote-ip-i18n.php';
-use Show_Remote_Ip_i18n;
+use Bonomo\Includes\Show_Remote_Ip_i18n;
 
 /**
  * The class responsible for defining all actions that occur in the admin area.
  */
 require_once plugin_dir_path( __DIR__ ) . 'admin/class-show-remote-ip-admin.php';
-use Show_Remote_Ip_Admin;
-
-
+use Bonomo\Admin\Show_Remote_Ip_Admin;
 
 /**
  * The class responsible for defining all actions that occur in the public-facing
  * side of the site.
  */
 require_once plugin_dir_path( __DIR__ ) . 'public/class-show-remote-ip-public.php';
-use Show_Remote_Ip_Public;
+use Bonomo\Public\Show_Remote_Ip_Public;
 
 /**
  * The class responsible for defining API endpoint.
  */
 require_once plugin_dir_path( __DIR__ ) . 'api/class-show-remote-ip-api.php';
-use Show_Remote_Ip_API;
+use Bonomo\API\Show_Remote_Ip_API;
 
 /**
  * The core plugin class.
@@ -194,7 +194,6 @@ class Show_Remote_Ip {
 	 * @access   private
 	 */
 	private function define_api_hooks() {
-
 		$plugin_api = new Show_Remote_Ip_API( $this->get_plugin_name(), $this->get_version() );
 		$this->loader->add_action( 'rest_api_init', $plugin_api, 'show_remote_ip_api' );
 	}

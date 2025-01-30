@@ -12,6 +12,8 @@
  * @subpackage Show_Remote_Ip/includes
  */
 
+namespace Bonomo\Includes;
+
 /**
  * Define the internationalization functionality.
  *
@@ -34,7 +36,7 @@ class Show_Remote_Ip_I18n {
 		load_plugin_textdomain(
 			'show-remote-ip',
 			false,
-			__DIR__ . '/languages'
+			plugin_dir_path( __DIR__ ) . '/languages'
 		);
 	}
 }

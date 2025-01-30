@@ -9,6 +9,8 @@
  * @subpackage Show_Remote_Ip/public
  */
 
+namespace Bonomo\API;
+
 /**
  * The public-facing functionality of the plugin.
  *
@@ -47,7 +49,6 @@ class Show_Remote_Ip_API {
 	 * @param    string $version      The version of this plugin.
 	 */
 	public function __construct( $plugin_name, $version ) {
-
 		$this->plugin_name = $plugin_name;
 		$this->version     = $version;
 	}
@@ -61,7 +62,7 @@ class Show_Remote_Ip_API {
 			'/get-ip',
 			array(
 				'methods'  => 'GET',
-				'callback' => 'Show_Remote_Ip_API::get_remote_ip',
+				'callback' => 'Bonomo\API\Show_Remote_Ip_API::get_remote_ip',
 			)
 		);
 	}

@@ -27,7 +27,9 @@
  * Domain Path:       /languages
  */
 
-use Show_Remote_Ip;
+namespace Bonomo\Show_Remote_Ip;
+
+use Bonomo\Includes\Show_Remote_Ip;
 
 // If this file is called directly, abort.
 if ( ! defined( 'WPINC' ) ) {
