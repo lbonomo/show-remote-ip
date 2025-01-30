@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Define the internationalization functionality
  *
@@ -24,8 +23,7 @@
  * @subpackage Show_Remote_Ip/includes
  * @author     Lucas Bonomo <bonomo.lucas@gmail.com>
  */
-class Show_Remote_Ip_i18n {
-
+class Show_Remote_Ip_I18n {
 
 	/**
 	 * Load the plugin text domain for translation.
@@ -33,11 +31,10 @@ class Show_Remote_Ip_i18n {
 	 * @since   0.0.2
 	 */
 	public function load_plugin_textdomain() {
-
 		load_plugin_textdomain(
 			'show-remote-ip',
 			false,
-			dirname( dirname( plugin_basename( __FILE__ ) ) ) . '/languages/'
+			__DIR__ . '/languages'
 		);
 	}
 }

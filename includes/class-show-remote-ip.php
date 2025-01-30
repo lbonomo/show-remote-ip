@@ -13,6 +13,41 @@
  */
 
 /**
+ * The class responsible for orchestrating the actions and filters of the
+ * core plugin.
+ */
+require_once plugin_dir_path( __DIR__ ) . 'includes/class-show-remote-ip-loader.php';
+use Show_Remote_Ip_Loader;
+
+/**
+ * The class responsible for defining internationalization functionality
+ * of the plugin.
+ */
+require_once plugin_dir_path( __DIR__ ) . 'includes/class-show-remote-ip-i18n.php';
+use Show_Remote_Ip_i18n;
+
+/**
+ * The class responsible for defining all actions that occur in the admin area.
+ */
+require_once plugin_dir_path( __DIR__ ) . 'admin/class-show-remote-ip-admin.php';
+use Show_Remote_Ip_Admin;
+
+
+
+/**
+ * The class responsible for defining all actions that occur in the public-facing
+ * side of the site.
+ */
+require_once plugin_dir_path( __DIR__ ) . 'public/class-show-remote-ip-public.php';
+use Show_Remote_Ip_Public;
+
+/**
+ * The class responsible for defining API endpoint.
+ */
+require_once plugin_dir_path( __DIR__ ) . 'api/class-show-remote-ip-api.php';
+use Show_Remote_Ip_API;
+
+/**
  * The core plugin class.
  *
  * This is used to define internationalization, admin-specific hooks, and
@@ -66,11 +101,11 @@ class Show_Remote_Ip {
 	 * @since   0.0.2
 	 */
 	public function __construct() {
+		$this->version = '0.0.2';
 		if ( defined( 'SHOW_REMOTE_IP_VERSION' ) ) {
 			$this->version = SHOW_REMOTE_IP_VERSION;
-		} else {
-			$this->version = '0.0.2';
 		}
+
 		$this->plugin_name = 'show-remote-ip';
 
 		$this->load_dependencies();
@@ -86,7 +121,7 @@ class Show_Remote_Ip {
 	 * Include the following files that make up the plugin:
 	 *
 	 * - Show_Remote_Ip_Loader. Orchestrates the hooks of the plugin.
-	 * - Show_Remote_Ip_i18n. Defines internationalization functionality.
+	 * - Show_Remote_Ip_I18n. Defines internationalization functionality.
 	 * - Show_Remote_Ip_Admin. Defines all hooks for the admin area.
 	 * - Show_Remote_Ip_Public. Defines all hooks for the public side of the site.
 	 *
@@ -97,42 +132,13 @@ class Show_Remote_Ip {
 	 * @access   private
 	 */
 	private function load_dependencies() {
-
-		/**
-		 * The class responsible for orchestrating the actions and filters of the
-		 * core plugin.
-		 */
-		require_once plugin_dir_path( __DIR__ ) . 'includes/class-show-remote-ip-loader.php';
-
-		/**
-		 * The class responsible for defining internationalization functionality
-		 * of the plugin.
-		 */
-		require_once plugin_dir_path( __DIR__ ) . 'includes/class-show-remote-ip-i18n.php';
-
-		/**
-		 * The class responsible for defining all actions that occur in the admin area.
-		 */
-		require_once plugin_dir_path( __DIR__ ) . 'admin/class-show-remote-ip-admin.php';
-
-		/**
-		 * The class responsible for defining all actions that occur in the public-facing
-		 * side of the site.
-		 */
-		require_once plugin_dir_path( __DIR__ ) . 'public/class-show-remote-ip-public.php';
-
-		/**
-		 * The class responsible for defining API endpoint.
-		 */
-		require_once plugin_dir_path( __DIR__ ) . 'api/class-show-remote-ip-api.php';
-
 		$this->loader = new Show_Remote_Ip_Loader();
 	}
 
 	/**
 	 * Define the locale for this plugin for internationalization.
 	 *
-	 * Uses the Show_Remote_Ip_i18n class in order to set the domain and to register the hook
+	 * Uses the Show_Remote_Ip_I18n class in order to set the domain and to register the hook
 	 * with WordPress.
 	 *
 	 * @since   0.0.2
@@ -140,7 +146,7 @@ class Show_Remote_Ip {
 	 */
 	private function set_locale() {
 
-		$plugin_i18n = new Show_Remote_Ip_i18n();
+		$plugin_i18n = new Show_Remote_Ip_I18n();
 
 		$this->loader->add_action( 'plugins_loaded', $plugin_i18n, 'load_plugin_textdomain' );
 	}

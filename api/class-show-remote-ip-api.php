@@ -70,11 +70,34 @@ class Show_Remote_Ip_API {
 	 * Get IP.
 	 */
 	public static function get_remote_ip() {
-		$ip = null;
-		if ( isset( $_SERVER['REMOTE_ADDR'] ) ) {
-			$ip = $_SERVER['REMOTE_ADDR']; //phpcs:ignore
+		$remote_address = '';
+		$forwarded_for  = '';
+		$client_ip      = '';
+
+		// HTTP_X_FORWARDED_FOR.
+		if ( isset( $_SERVER['HTTP_X_FORWARDED_FOR'] ) && ! empty( $_SERVER['HTTP_X_FORWARDED_FOR'] ) ) {
+			$forwarded_for = explode(
+				',',
+				sanitize_text_field( wp_unslash( $_SERVER['HTTP_X_FORWARDED_FOR'] ) )
+			);
 		}
 
-		return $ip;
+		// HTTP_CLIENT_IP.
+		if ( isset( $_SERVER['HTTP_CLIENT_IP'] ) && ! empty( $_SERVER['HTTP_CLIENT_IP'] ) ) {
+			$client_ip = sanitize_text_field( wp_unslash( $_SERVER['HTTP_CLIENT_IP'] ) );
+		}
+
+		// REMOTE_ADDR.
+		if ( isset( $_SERVER['REMOTE_ADDR'] ) && ! empty( $_SERVER['REMOTE_ADDR'] ) ) {
+			$remote_address = sanitize_text_field( wp_unslash( $_SERVER['REMOTE_ADDR'] ) );
+		}
+
+		$data = array(
+			'forwarded_for'  => $forwarded_for,
+			'client_ip'      => $client_ip,
+			'remote_address' => $remote_address,
+		);
+
+		return $data;
 	}
 }

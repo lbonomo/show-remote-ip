@@ -2,8 +2,8 @@
 Contributors: lbonomo
 Donate link: https://lucasbonomo.com
 Tags: shortcode, ip
-Version: 1.2.3
-Stable tag: 1.2.3
+Version: 1.3.0
+Stable tag: 1.3.0
 Tested up to: 6.7.1
 Requires at least: 5.0.0
 Requires PHP: 7.4
@@ -19,9 +19,14 @@ and public an endpoint to show the IP (/wp-json/show-remote-ip/v1/get-ip)
 
 == Changelog ==
 
-= 1.2.3 =
+= 1.3.0 =
+*Release Date 29/01/2025*
+ - Show more info on API endpoint `/wp-json/show-remote-ip/v1/get-ip`
+
+= 1.2.5 =
 *Release Date 29/01/2025*
 - Tested on WordPress 6.7.1
+- Added PHP Code Sniffer, PHP Mess detector and Plugin Check into on development process
 
 = 1.2.2 =
 *Release Date 18/05/2022*

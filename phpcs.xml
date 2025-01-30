@@ -9,13 +9,14 @@
 	<arg name="extensions" value="php"/>
 	<config name="testVersion" value="7.4"/>
 
-	<!-- 2. Files -->
+	<!-- Files -->
 	<file>./admin/</file>
 	<file>./api/</file>
 	<file>./includes/</file>
 	<file>./public/</file>
 	<file>./show-remote-ip.php</file>
 
+	<!-- Rules -->
 	<rule ref="WordPress"/>
 	<rule ref="WordPress-Core"/>
 	<rule ref="WordPress-Docs"/>

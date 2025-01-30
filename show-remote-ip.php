@@ -8,15 +8,15 @@
  * that starts the plugin.
  *
  * @link              https://lucasbonomo.com
- * @since             1.2.3
+ * @since             1.3.0
  * @package           Show_Remote_Ip
  *
  * @wordpress-plugin
  * Plugin Name:       Show Remote IP
  * Plugin URI:        https://lucasbonomo.com/wordpress
  * Description:       Just show the remote IP of client (with a shortcode [show-remote-ip])
- * Version:           1.2.3
- * Stable tag:        1.2.3
+ * Version:           1.3.0
+ * Stable tag:        1.3.0
  * Requires PHP:      7.0
  * Tested up to:      6.7.1
  * Author:            Lucas Bonomo
@@ -26,6 +26,8 @@
  * Text Domain:       show-remote-ip
  * Domain Path:       /languages
  */
+
+use Show_Remote_Ip;
 
 // If this file is called directly, abort.
 if ( ! defined( 'WPINC' ) ) {
@@ -37,28 +39,7 @@ if ( ! defined( 'WPINC' ) ) {
  * Start at version 0.0.2 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
  */
-define( 'SHOW_REMOTE_IP_VERSION', '1.2.3' );
-
-/**
- * The code that runs during plugin activation.
- * This action is documented in includes/class-show-remote-ip-activator.php
- */
-function activate_show_remote_ip() {
-	require_once plugin_dir_path( __FILE__ ) . 'includes/class-show-remote-ip-activator.php';
-	Show_Remote_Ip_Activator::activate();
-}
-
-/**
- * The code that runs during plugin deactivation.
- * This action is documented in includes/class-show-remote-ip-deactivator.php
- */
-function deactivate_show_remote_ip() {
-	require_once plugin_dir_path( __FILE__ ) . 'includes/class-show-remote-ip-deactivator.php';
-	Show_Remote_Ip_Deactivator::deactivate();
-}
-
-register_activation_hook( __FILE__, 'activate_show_remote_ip' );
-register_deactivation_hook( __FILE__, 'deactivate_show_remote_ip' );
+define( 'SHOW_REMOTE_IP_VERSION', '1.3.0' );
 
 /**
  * The core plugin class that is used to define internationalization,

@@ -1,5 +1,4 @@
 <?php
-
 /**
  * The public-facing functionality of the plugin.
  *
@@ -98,10 +97,20 @@ class Show_Remote_Ip_Public {
 	}
 
 	/**
-	 * @lbonomo / Arranco con el ShortCode
+	 * Display the remote IP address of the client.
+	 *
+	 * This function retrieves the client's IP address from the server's
+	 * `REMOTE_ADDR` variable and returns it wrapped in a span element
+	 * with the class "show-remote-ip".
+	 *
+	 * @return string HTML span element containing the client's IP address.
 	 */
 	public function show_remote_ip() {
-		$html = '<span class="show-remote-ip">' . $_SERVER['REMOTE_ADDR'] . '</span>';
+		$remote_address = '';
+		if ( isset( $_SERVER['REMOTE_ADDR'] ) && ! empty( $_SERVER['REMOTE_ADDR'] ) ) {
+			$remote_address = sanitize_text_field( wp_unslash( $_SERVER['REMOTE_ADDR'] ) );
+		}
+		$html = '<span class="show-remote-ip">' . $remote_address . '</span>';
 		return $html;
 	}
 }
