@@ -16,3 +16,12 @@ https://wordpress.org/plugins/promotore-simple-analytics/
 
 ### Fuente
 ![screenshot-2](.wordpress-org/screenshot-2.png)
+
+
+### Testing Action
+
+1. Create `.secrets` file
+  SVN_USERNAME=[user-name]
+  SVN_PASSWORD=[pass]
+
+2. Run `act --secret-file .secrets`
