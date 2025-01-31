@@ -1,19 +1,15 @@
 <?php
 /**
- * The plugin bootstrap file
+ * Show Remote IP
  *
- * This file is read by WordPress to generate the plugin information in the plugin
- * admin area. This file also includes all of the dependencies used by the plugin,
- * registers the activation and deactivation functions, and defines a function
- * that starts the plugin.
- *
- * @link              https://lucasbonomo.com
- * @since             1.3.0
- * @package           Show_Remote_Ip
+ * @package     Show_Remote_Ip
+ * @author      Lucas Bonomo
+ * @copyright   2025 Lucas Bonomo
+ * @license     GPL-2.0-or-later
  *
  * @wordpress-plugin
  * Plugin Name:       Show Remote IP
- * Plugin URI:        https://lucasbonomo.com/wordpress
+ * Plugin URI:        https://lucasbonomo.com/wordpress/plugins/show-remote-ip
  * Description:       Just show the remote IP of client (with a shortcode [show-remote-ip])
  * Version:           1.3.0
  * Stable tag:        1.3.0
