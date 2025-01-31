@@ -1,0 +1,10 @@
+.wordpress-org/blanco/
+.wordpress-org/*.xcf
+.wordpress-org/mk_images.sh
+.gitattributes
+.github/
+README.md
+composer.json
+composer.lock
+phpcs.xml
+phpmd.xml

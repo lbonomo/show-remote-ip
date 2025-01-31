@@ -1,4 +1,4 @@
-=== Plugin Name ===
+=== Show Remote IP ===
 Contributors: lbonomo
 Donate link: https://lucasbonomo.com
 Tags: shortcode, ip
