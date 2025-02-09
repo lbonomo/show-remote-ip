@@ -2,7 +2,7 @@
 Contributors: lbonomo
 Donate link: https://lucasbonomo.com
 Tags: shortcode, ip
-Version: 1.3.0
+Version: 1.3.1
 Stable tag: 1.3.0
 Tested up to: 6.7.1
 Requires at least: 5.0.0
@@ -18,6 +18,10 @@ and public an endpoint to show the IP (/wp-json/show-remote-ip/v1/get-ip)
 == Installation ==
 
 == Changelog ==
+
+= 1.3.1 =
+*Release Date 09/02/2025*
+ - Tidying SVN repo.
 
 = 1.3.0 =
 *Release Date 29/01/2025*

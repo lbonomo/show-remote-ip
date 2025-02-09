@@ -1,8 +1,11 @@
-.wordpress-org/blanco/
-.wordpress-org/*.xcf
-.wordpress-org/mk_images.sh
+/.wordpress-org
+/.git
+/.github
+/node_modules
+/.github/
 .gitattributes
-.github/
+.distignore
+.gitignore
 README.md
 composer.json
 composer.lock
