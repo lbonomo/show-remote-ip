@@ -61,8 +61,9 @@ class Show_Remote_Ip_API {
 			'show-remote-ip/v1',
 			'/get-ip',
 			array(
-				'methods'  => 'GET',
-				'callback' => 'Bonomo\API\Show_Remote_Ip_API::get_remote_ip',
+				'methods'             => 'GET',
+				'callback'            => 'Bonomo\API\Show_Remote_Ip_API::get_remote_ip',
+				'permission_callback' => '__return_true',
 			)
 		);
 	}
