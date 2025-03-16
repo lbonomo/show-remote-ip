@@ -1,0 +1,4 @@
+# _None
+#
+
+(A) 2025-03-16 Agregar datos obtenidos desde https://ip.guide/
